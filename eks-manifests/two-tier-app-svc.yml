@@ -1,0 +1,15 @@
+#D:\project\our\two-tier-flask-app-master\eks-manifests\two-tier-app-svc.yml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: two-tier-app-service
+spec:
+  selector:
+    app: two-tier-app
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+    

@@ -1,0 +1,12 @@
+#D:\project\our\two-tier-flask-app-master\k8s\mysql-svc.yml
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+spec:
+  selector:
+    app: mysql
+  ports:
+    - port: 3306
+      targetPort: 3306
