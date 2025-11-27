@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm p-4">
+  <h4>Welcome, {{ user.username }}!</h4>
+  <p>Email: {{ user.email }}</p>
+  <p>This is your dashboard.</p>
+</div>
+{% endblock %}

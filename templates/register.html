@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow-sm p-4">
+      <h4 class="mb-3">Register</h4>
+
+      <form method="post" action="/register">
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          <input name="username" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input name="email" type="email" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input name="password" type="password" class="form-control" required>
+        </div>
+
+        <button class="btn btn-success w-100">Create Account</button>
+      </form>
+
+      <hr>
+      <p class="text-center">Already registered?
+        <a href="/login">Login</a>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
